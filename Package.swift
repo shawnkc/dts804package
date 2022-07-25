@@ -20,9 +20,10 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "dts804package",
-            dependencies: []),
-        .testTarget(
-            name: "dts804packageTests",
-            dependencies: ["dts804package"]),
+            dependencies: [],
+				resources: [
+					.process("Resources")
+				]
+		  )
     ]
 )
